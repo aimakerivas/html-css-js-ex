@@ -1,14 +1,18 @@
 # html-css-js-ex
 
-🎈 **互動球形展示 DEMO**
+🎈 **SVG 互動球形展示 DEMO**
 
 此專案示範使用 HTML / CSS / JavaScript 建立一個可互動的圓形動畫物件，可拖曳、反彈、點擊變色。
 
 ## ✅ Demo 功能
 
+- SVG
 - 球形動畫反彈效果
 - 拖曳控制球位置
 - 點擊變色與速度加快
+- 類光源設定
+- 球形放大縮小
+- Rainbow Gradient
 
 ## 🚀 GitHub Pages 預覽網址（部署後）
 
