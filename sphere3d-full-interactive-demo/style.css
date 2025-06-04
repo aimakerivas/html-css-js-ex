@@ -1,0 +1,31 @@
+body {
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+  padding: 10px;
+}
+h2 {
+  text-align: center;
+}
+.info {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.sphere3d {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  background: radial-gradient(circle at 30% 30%, #ff0, #c00);
+  box-shadow: inset -15px -15px 30px rgba(105, 61, 61, 0.3);
+  cursor: grab;
+}
+.controls {
+  margin: 200px auto 0;
+  width: fit-content;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+}

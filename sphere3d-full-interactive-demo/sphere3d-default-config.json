@@ -1,0 +1,26 @@
+{
+  "position": {
+    "x": 100,
+    "y": 100
+  },
+  "light": {
+    "xPercent": 30,
+    "yPercent": 30
+  },
+  "gradient": {
+    "startColor": "#ffffff",
+    "endColor": "#cc0000"
+  },
+  "shadow": {
+    "opacity": 0.3
+  },
+  "movement": {
+    "speed": 2.0,
+    "direction": {
+      "dx": 2,
+      "dy": 2
+    }
+  },
+  "draggable": true,
+  "animation": true
+}
