@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>球形</title>
+</head>
+<body>
+<style>
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-200px); }
+    100% { transform: translateY(0); }
+  }
+
+  .bouncingBall {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    background: radial-gradient(circle at 30% 30%, #ff0, #c00);
+    box-shadow:  inset -15px -15px 30px rgba(0,0,0,0.3);
+    border-radius: 50%;
+    animation: bounce 1s infinite ease-in-out;
+    margin: 300px auto;
+  }
+</style>
+<div class="bouncingBall"></div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>球形</title>
+</head>
+<body>
+<style>
+ h2 {
+  text-align: center;
+}
+
+  @keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  .rotating {
+  width: 60px; height: 60px;
+  border: 6px solid #ccc;
+  border-top: 6px solid blue;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  margin: 10px auto;
+}
+
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-200px); }
+    100% { transform: translateY(0); }
+  }
+
+  .bouncingBall {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 30%, #ff0, #c00);
+    box-shadow:  inset -15px -15px 30px rgba(0,0,0,0.3);
+    border-radius: 50%;
+    animation: bounce 1s infinite ease-in-out;
+    margin: 50px auto;
+  }
+
+@keyframes blink {
+  from { background: orange; }
+  to   { background: red; }
+}
+
+.flash {
+  width: 100px; height: 100px;
+  background: orange;
+  animation: blink 1s infinite alternate;
+  margin: 50px auto;
+}
+
+</style>
+
+
+<!--###旋轉動畫  -->
+<h2>⚙️旋轉動畫 </h2>
+<div class="rotating"></div>
+
+<!--###彈跳動畫  -->
+<h2>⚙️彈跳動畫</h2>
+<div class="bouncingBall"></div>
+
+<!--###背景顏色變化（閃爍）  -->
+<h2>⚙️背景顏色變化（閃爍）</h2>
+<div class="flash"></div>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>所有 CSS @keyframes 動畫經典範例</title>
+  <style>
+    body {
+      background: #fff;
+      color: #330;
+      font-family: sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .demo {
+      width: 100px;
+      height: 100px;
+      background: #09f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      font-size: 10px;
+      text-align: center;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    .bounce     { 
+      animation-name: bounce; 
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      background: radial-gradient(circle at 30% 30%, #ff0, #c00);
+      box-shadow:  15px 15px 30px rgba(0,0,0,0.3);
+      border-radius: 50%;
+      animation: bounce 1s infinite ease-in-out;
+      margin: 100px auto;
+    }
+    .flash      { animation-name: flash; background-color: orange;}
+    .spin       { animation-name: spin; animation-timing-function: linear; }
+    .pulse      { animation-name: pulse; background-color: green;}
+    .slidein    { animation-name: slidein; background-color: blue;}
+    .grow       { animation-name: grow;background-color: indigo; }
+    .shrink     { animation-name: shrink; background-color: pink;}
+    .wiggle     { animation-name: wiggle; background-color: cadetblue;}
+    .fade       { animation-name: fade; background-color: chartreuse;}
+    .flip       { animation-name: flip; background-color: cornflowerblue;}
+    .heartbeat  { animation-name: heartbeat; background-color: brown;}
+    .swing      { animation-name: swing; background-color: burlywood;}
+    .shake      { animation-name: shake; background-color: darkcyan;}
+    .blink      { animation-name: blink; background-color: forestgreen;}
+    .hoverglow  { animation-name: hoverglow; 
+      background: radial-gradient(circle at 30% 30%, #ff0, #c00);
+      box-shadow:  inset -15px -15px 30px rgba(0,0,0,0.3);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-50px); }
+    }
+
+    @keyframes flash {
+      0%, 100% { background: #09f; }
+      50%      { background: #fff; color: #000; }
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.2); }
+    }
+
+    @keyframes slidein {
+      0%   { transform: translateX(-120px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes grow {
+      0%   { width: 40px; height: 40px; }
+      100% { width: 100px; height: 100px; }
+    }
+
+    @keyframes shrink {
+      0%   { transform: scale(1); }
+      100% { transform: scale(0.5); }
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      75% { transform: rotate(-10deg); }
+    }
+
+    @keyframes fade {
+      0%   { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+
+    @keyframes flip {
+      0%   { transform: rotateY(0); }
+      100% { transform: rotateY(180deg); }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25%      { transform: scale(1.3); }
+      75%      { transform: scale(0.9); }
+    }
+
+    @keyframes swing {
+      20% { transform: rotate(15deg); }
+      40% { transform: rotate(-10deg); }
+      60% { transform: rotate(5deg); }
+      80% { transform: rotate(-5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0; }
+    }
+
+    @keyframes hoverglow {
+      0%   { box-shadow: 0 0 5px #000; }
+      50%  { box-shadow: 0 0 25px #000; }
+      100% { box-shadow: 0 0 5px #000; }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo bounce">🔁bounce,彈跳</div>
+  <div class="demo flash">⚡ flash,閃爍</div>
+  <div class="demo spin">🔃 spin,旋轉</div>
+  <div class="demo pulse">💓pulse,呼吸縮放</div>
+  <div class="demo slidein">⬅️slidein,滑入</div>
+  <div class="demo grow">🔼 grow,放大</div>
+  <div class="demo shrink">🔽 shrink,縮小</div>
+  <div class="demo wiggle">🔁 wiggle,左右搖擺</div>
+  <div class="demo fade">💨fade,淡出</div>
+  <div class="demo flip">🔄 flip,翻轉</div>
+  <div class="demo heartbeat">❤️heartbeat,心跳</div>
+  <div class="demo swing">🧚swing,旋轉擺動</div>
+  <div class="demo shake">🔧 shake,抖動</div>
+  <div class="demo blink">👀 blink,閃爍</div>
+  <div class="demo hoverglow">✨glow,發光特效hoverglow</div>
+</body>
+</html>
