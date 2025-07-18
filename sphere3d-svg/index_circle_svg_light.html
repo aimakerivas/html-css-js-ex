@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>SVG 放射狀漸層圓形</title>
+  <style>
+    body {
+      background: #fdfdfd;
+      font-family: sans-serif;
+      padding: 30px;
+      text-align: center;
+    }
+    svg {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>🌞 SVG 放射狀漸層圓形</h2>
+  <svg width="200" height="200">
+    <defs>
+      <radialGradient id="grad1" cx="30%" cy="30%" r="50%">
+        <stop offset="0%" style="stop-color:#fff; stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#f90; stop-opacity:1" />
+      </radialGradient>
+    </defs>
+    <circle cx="100" cy="100" r="80" fill="url(#grad1)" stroke="black" stroke-width="2" />
+  </svg>
+
+  <p>☝️ 這個圓形使用放射狀漸層，亮點偏左上</p>
+</body>
+</html>

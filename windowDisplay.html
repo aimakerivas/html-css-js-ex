@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>取得螢幕資訊</title>
+  <style>
+    body {
+      font-size: 16px;
+      font-family: "Arial", sans-serif;
+      padding: 2rem;
+    }
+    #info {
+      margin-top: 1rem;
+      white-space: pre-wrap;
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h2>取得螢幕尺寸與字體大小</h2>
+  <button onclick="getScreenInfo()">點我取得資訊</button>
+  <div id="info"></div>
+
+  <script>
+    function getScreenInfo() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      // 取得 <body> 元素的計算後樣式
+      const bodyStyle = window.getComputedStyle(document.body);
+      const fontSize = bodyStyle.fontSize;
+      const fontFamily = bodyStyle.fontFamily;
+
+      const info = `📐 螢幕寬度: ${width}px
+📏 螢幕高度: ${height}px
+🔤 字型大小: ${fontSize}
+🔠 字型樣式: ${fontFamily}`;
+
+      document.getElementById('info').textContent = info;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#ball {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, #fff, red);
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  cursor: pointer;
+}

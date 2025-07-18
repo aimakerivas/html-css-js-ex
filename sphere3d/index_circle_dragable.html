@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>可拖曳球形</title>
+  <style>
+    #dragBall {
+      width: 60px;
+      height: 60px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      cursor: grab;
+    }
+  </style>
+</head>
+<body>
+  <div id="dragBall"></div>
+
+  <script>
+    const ball = document.getElementById('dragBall');
+    let isDragging = false;
+    let offsetX, offsetY;
+    let posX = 100;
+    let posY = 100;
+    let dx = 2; // 水平方向速度
+    let dy = 2; // 垂直方向速度
+
+
+    ball.addEventListener('mousedown', e => {
+      isDragging = true;
+      offsetX = e.offsetX;
+      offsetY = e.offsetY;
+      ball.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('mousemove', e => {
+      if (isDragging) {
+        ball.style.left = (e.pageX - offsetX) + 'px';
+        ball.style.top = (e.pageY - offsetY) + 'px';
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      ball.style.cursor = 'grab';
+    });
+
+
+  </script>
+</body>
+</html>

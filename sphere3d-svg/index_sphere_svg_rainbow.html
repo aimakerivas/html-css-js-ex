@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>SVG 彩虹球（漸層動畫 + 光影 + 陰影）</title>
+  <style>
+    body {
+      background: #222;
+      font-family: sans-serif;
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+    }
+    svg {
+      border: 1px solid #555;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <h2>🌈 SVG 彩虹漸層球體</h2>
+  <svg width="300" height="300">
+    <defs>
+      <radialGradient id="rainbowGrad" cx="50%" cy="50%" r="60%" fx="30%" fy="30%">
+        <stop offset="0%"  stop-color="white" />
+        <stop offset="25%" stop-color="red">
+          <animate attributeName="stop-color" values="red;orange;yellow;green;blue;indigo;violet;red" dur="5s" repeatCount="indefinite"/>
+        </stop>
+        <stop offset="50%" stop-color="yellow" />
+        <stop offset="75%" stop-color="blue" />
+        <stop offset="100%" stop-color="black" />
+      </radialGradient>
+      <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="10" dy="10" stdDeviation="5" flood-color="rgba(0,0,0,0.6)" />
+      </filter>
+    </defs>
+
+    <circle cx="150" cy="150" r="100" fill="url(#rainbowGrad)" filter="url(#shadow)" />
+  </svg>
+
+  <p>✨ 中心亮點、彩虹漸層流動、含陰影效果</p>
+</body>
+</html>
