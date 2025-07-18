@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>拖曳元件產生器</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; }
+    #control { padding: 10px; background: #eee; display: flex; gap: 10px; align-items: center; }
+    #canvasContainer { border: 1px solid #ccc; height: 600px; position: relative; background: #fdfdfd; }
+    .draggable {
+      position: absolute;
+      cursor: move;
+      border: 1px dashed #aaa;
+      padding: 4px 8px;
+      background: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .draggable:hover { box-shadow: 0 0 5px #ccc; }
+    .coords { font-size: 10px; color: #999; }
+  </style>
+</head>
+<body>
+
+<div id="control">
+  元件類型：
+  <select id="elementType">
+    <option value="button">按鈕</option>
+    <option value="text">文字</option>
+    <option value="input">輸入欄</option>
+    <option value="icon">圖示</option>
+  </select>
+  <input id="contentInput" placeholder="文字內容或 icon class" value="範例" />
+  <input type="color" id="colorPicker" value="#4caf50" />
+  <input type="number" id="fontSize" value="16" style="width: 60px"> px
+  <button onclick="addElement()">新增</button>
+  <button onclick="exportJSON()">匯出 JSON</button>
+  <button onclick="exportHTML()">匯出 HTML</button>
+</div>
+
+<div id="canvasContainer"></div>
+
+<script>
+  let idCounter = 0;
+
+  function addElement() {
+    const type = document.getElementById("elementType").value;
+    const content = document.getElementById("contentInput").value;
+    const color = document.getElementById("colorPicker").value;
+    const fontSize = document.getElementById("fontSize").value;
+
+    const el = document.createElement("div");
+    el.className = "draggable";
+    el.setAttribute("data-id", ++idCounter);
+    el.style.left = "50px";
+    el.style.top = "50px";
+    el.style.color = color;
+    el.style.fontSize = fontSize + "px";
+
+    if (type === "button") {
+      el.innerHTML = `<button style="background:${color}; font-size:${fontSize}px;">${content}</button>`;
+    } else if (type === "text") {
+      el.innerText = content;
+    } else if (type === "input") {
+      el.innerHTML = `<input placeholder="${content}" style="font-size:${fontSize}px;">`;
+    } else if (type === "icon") {
+      el.innerHTML = `<i class="${content}" style="font-size:${fontSize}px; color:${color}"></i>`;
+    }
+
+    // 顯示座標
+    const coords = document.createElement("div");
+    coords.className = "coords";
+    coords.innerText = `(${el.style.left}, ${el.style.top})`;
+    el.appendChild(coords);
+
+    // 拖曳事件
+    enableDrag(el);
+
+    // 右鍵刪除
+    el.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      if (confirm("刪除此元素？")) el.remove();
+    });
+
+    document.getElementById("canvasContainer").appendChild(el);
+  }
+
+  function enableDrag(el) {
+    let offsetX = 0, offsetY = 0, isDragging = false;
+
+    el.addEventListener("mousedown", function(e) {
+      isDragging = true;
+      offsetX = e.offsetX;
+      offsetY = e.offsetY;
+    });
+
+    document.addEventListener("mousemove", function(e) {
+      if (isDragging) {
+        el.style.left = (e.pageX - offsetX) + "px";
+        el.style.top = (e.pageY - offsetY - 40) + "px";
+        const coords = el.querySelector(".coords");
+        if (coords) coords.innerText = `(${el.style.left}, ${el.style.top})`;
+      }
+    });
+
+    document.addEventListener("mouseup", () => isDragging = false);
+  }
+
+  function exportJSON() {
+    const elements = Array.from(document.querySelectorAll(".draggable")).map(el => ({
+      type: el.querySelector("button") ? "button"
+           : el.querySelector("input") ? "input"
+           : el.querySelector("i") ? "icon"
+           : "text",
+      content: el.innerText,
+      x: el.style.left,
+      y: el.style.top,
+      color: el.style.color || "#000",
+      fontSize: el.style.fontSize || "16px"
+    }));
+    const blob = new Blob([JSON.stringify(elements, null, 2)], { type: "application/json" });
+    const link = document.createElement("a");
+    link.download = "layout.json";
+    link.href = URL.createObjectURL(blob);
+    link.click();
+  }
+
+  function exportHTML() {
+    const html = document.documentElement.outerHTML;
+    const blob = new Blob([html], { type: "text/html" });
+    const link = document.createElement("a");
+    link.download = "layout.html";
+    link.href = URL.createObjectURL(blob);
+    link.click();
+  }
+</script>
+
+<!-- 可選用 FontAwesome 圖示 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</body>
+</html>
