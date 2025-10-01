@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>完整化學元素週期表(118元素可點擊)</title>
+
+<link rel="stylesheet" href="css/elements-rendering.css" />
+<script src="js/fetch.js" defer></script>
+
+<!-- 以下為錯誤示範，請勿使用
+<style src="css/elements-rendering.css"></style>
+<script src="js/fetch.js"> </script>
+-->
+</head>
+
+<body>
+<h1>完整化學元素週期表(118元素可點擊)</h1>
+
+<div class="periodic-table" id="periodicTable">
+  <!-- 週期表會用JS動態生成 -->
+</div>
+
+<!-- 以下為點擊週期表化學元素 顯示 詳細資訊 -->
+<!-- 詳細資訊面板，預設隱藏，點擊元素後顯示 -->
+<div id="detailPanel" style="display:none;">
+  <button id="closeBtn" onclick="hideDetail()">關閉</button>
+  <h2 id="elementName"></h2>
+  <div class="element-info">
+    <p><strong>原子序數：</strong><span id="atomicNumber"></span></p>
+    <p><strong>化學符號：</strong><span id="chemicalSymbol"></span></p>
+    <p><strong>原子量：</strong><span id="atomicMass"></span></p>
+    <p id="description"></p>
+    <img id="elementImage" alt="元素示意圖" />
+    <div class="electron-shell"><strong>電子殼層配置：</strong><br /><span id="electronShells"></span></div>
+  </div>
+</div>
+</body>
+</html>
+
+
+

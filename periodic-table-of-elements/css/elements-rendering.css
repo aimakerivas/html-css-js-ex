@@ -1,0 +1,106 @@
+  body {
+    font-family: "Noto Sans TC", sans-serif;
+    margin: 20px;
+    background-color: #eef2f7;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 50px);
+    grid-template-rows: repeat(10, 60px);
+    grid-gap: 4px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 920px;
+  }
+  .element {
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    padding: 6px 2px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
+  }
+  .element:hover {
+    background-color: #b3d1ff;
+    border-color: #1e90ff;
+  }
+  .element-symbol {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .element-number {
+    font-size: 10px;
+    color: #555;
+  }
+  .gap {
+    background: transparent;
+    border: none;
+    cursor: default;
+  }
+  #detailPanel {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid #1e90ff;
+    box-shadow: 0 0 20px rgba(30,144,255,0.3);
+    position: relative;
+  }
+  #closeBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: #1e90ff;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 4px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  #closeBtn:hover {
+    background: #0f5ea1;
+  }
+  #detailPanel h2 {
+    margin-top: 0;
+  }
+  .element-info p {
+    line-height: 1.4;
+  }
+  .element-info img {
+    width: 150px;
+    margin-top: 12px;
+  }
+  .electron-shell {
+    margin-top: 10px;
+  }
+  .electron-shell span {
+    background: #1e90ff;
+    color: white;
+    font-size: 14px;
+    border-radius: 12px;
+    padding: 3px 8px;
+    margin: 2px 4px 2px 0;
+    display: inline-block;
+  }
+  /* 鑭系與錒系元素獨立區塊 */
+  .f-block {
+    grid-column-start: 3;
+    grid-column-end: span 15;
+    display: flex;
+    gap: 4px;
+    margin-top: 10px;
+  }
