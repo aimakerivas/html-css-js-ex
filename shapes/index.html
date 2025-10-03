@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Clip-Path Editor</title>
+  <link rel="stylesheet" href="css/shapeView.css" type="text/css">  
+</head>
+<body>
+  <header>CSS clip-path maker</header>
+  <div class="container">
+    <div class="main">
+      <div class="preview-box" alt="preview-box">
+        <!-- <img id="clip-image" src="https://cdn.pixabay.com/photo/2017/10/24/18/54/watercolor-2880673_1280.jpg" alt="Clip Image"> -->
+        <img id="clip-image" src="https://ihbp.org.in/wp-content/uploads/2024/11/SURAJ-BARUI-HI-18X14.jpg" alt="Clip Image">
+        <!-- <img id="clip-image" src="https://tinypng.com/static/images/panda_with_cord.webp"  alt="Clip Image"> -->
+      </div>
+    </div>
+    
+    <aside class="sidebar">
+        <div class="shape-list">
+          <div class="shape-button active" data-shape="ellipse(25% 40% at 50% 50%)">Ellipse</div>
+          <div class="shape-button" data-shape="circle(40% at 50% 50%)">Circle</div>
+          <div class="shape-button" data-shape="inset(10% 20% 10% 20%)">Inset</div>
+          <div class="shape-button" data-shape="polygon(50% 0%, 0% 100%, 100% 100%)">Triangle</div>
+          <div class="shape-button" data-shape="polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%)">Trapezoid</div>
+          <div class="shape-button" data-shape="polygon(0% 0%, 100% 0%, 75% 100%, 25% 100%)">Parallelogram</div>
+          <div class="shape-button" data-shape="polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)">Hexagon</div>
+          <div class="shape-button" data-shape="polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)">Heptagon</div>
+          <div class="shape-button" data-shape="polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)">Star</div>
+          <div class="shape-button" data-shape="polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%)">Right Chevron</div>
+          <div class="shape-button" data-shape="polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%)">Left Chevron</div>
+          <div class="shape-button" data-shape="polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)">Right Point</div>
+          <div class="shape-button" data-shape="polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%)">Left Point</div>
+          <div class="shape-button" data-shape="polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)">Right Arrow</div>
+          <div class="shape-button" data-shape="polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)">Cross</div>
+          <div class="shape-button" data-shape="polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%)">Message</div>
+          <div class="shape-button" data-shape="polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)">Closs</div>
+          <div class="shape-button" data-shape="polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%)">Frame</div>
+          <div class="shape-button" data-shape="inset(5% 20% 15% 10%)">Inset</div>  
+          <div class="shape-button" data-shape="polygon(10% 75%, 10% 25%, 35% 0%, 100% 10%, 90% 30%, 50% 30%, 40% 40%, 40% 60%, 50% 70%, 90% 70%, 100% 90%, 35% 100%)">Custom Polygon</div>
+        </div>
+        <hr>
+        <div>
+            <label for="image-url">圖片 URL:</label>
+            <button id="open-popup" ">＋ 選擇圖片</button>
+            <input type="text" id="image-url" placeholder="輸入圖片網址" "><br>
+            <button id="update-image" ">更新圖片</button><br>
+           
+        </div>
+
+        <div id="popup-overlay"></div>
+        <div id="popup">
+          <h3>選擇圖片</h3>
+          <div id="popup-list"></div> <!-- 動態生成選項 -->
+          <button id="popup-close">關閉</button>
+        </div>
+      
+    </aside>
+
+  </div>
+  <footer>
+    <code id="code-box">clip-path: ellipse(25% 40% at 50% 50%);</code>
+  </footer>
+
+  <script src="js/shapeView.js"></script>
+
+</body>
+</html>
