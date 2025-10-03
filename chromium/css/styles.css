@@ -1,0 +1,33 @@
+#arch {
+    width: 400px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+.item {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* 滑鼠懸停效果 */
+.item:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 顏色對應 */
+.green       { background-color: #4CAF50; }
+.light-green { background-color: #8BC34A; }
+.lime        { background-color: #CDDC39; color: #000; }
+.yellow      { background-color: #FFC107; color: #000; }
+.orange      { background-color: #FF9800; }
+.red         { background-color: #F44336; }
+.black        { background-color: #000000; }
+
