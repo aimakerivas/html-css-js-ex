@@ -3,17 +3,17 @@
     margin: 20px;
     background-color: #eef2f7;
   }
-  h1 {
+  h2 {
     text-align: center;
     margin-bottom: 12px;
   }
   .periodic-table {
     display: grid;
     grid-template-columns: repeat(18, 50px);
-    grid-template-rows: repeat(10, 60px);
+    grid-template-rows: repeat(10, 50px);
     grid-gap: 4px;
     justify-content: center;
-    margin: 20px auto;
+    margin: 10px auto;
     max-width: 920px;
   }
   .element {
@@ -32,14 +32,24 @@
     box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
   }
   .element:hover {
+    transform: scale(1.15);
     background-color: #b3d1ff;
     border-color: #1e90ff;
+    transition: transform 0.3s, box-shadow 0.3s; 
   }
+  .element-name {
+    font-weight: bold;
+    /* font-size: 7px; */
+    font-size: 55%; 
+    color: #555; 
+  }
+
   .element-symbol {
     font-weight: bold;
     font-size: 18px;
   }
   .element-number {
+    font-weight: bold;
     font-size: 10px;
     color: #555;
   }
@@ -68,6 +78,7 @@
     font-weight: bold;
     font-size: 18px;
     padding: 4px 12px;
+    transition: transform 0.3s, box-shadow 0.3s; 
     cursor: pointer;
     border-radius: 3px;
   }

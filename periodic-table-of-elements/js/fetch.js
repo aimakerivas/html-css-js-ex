@@ -76,7 +76,7 @@ function generateTable() {
         let el = grid[row][col];
         if (el) {
           cell.className = "element";
-          cell.innerHTML = `<div class="element-symbol">${el.symbol}</div><div class="element-number">${el.num}</div>`;
+          cell.innerHTML = `<div class="element-number">${el.num}</div><div class="element-symbol">${el.symbol}</div><div class="element-name">${el.name}</div>`;
           cell.title = el.name + " (" + el.symbol + ")";
           if(el.type == 1)
             //cell.style.backgroundColor = "lightgreen";
@@ -129,7 +129,7 @@ function showDetail(num) {
   const el = elements.find(e => e.num === num);
   if (!el) return;
   document.getElementById("elementName").textContent = el.name + " (" + el.symbol + ")";
-  document.getElementById("atomicNumber").textContent = el.num;
+  document.getElementById("atomicNumber").textContent = el.num ;
   document.getElementById("chemicalSymbol").textContent = el.symbol;
   document.getElementById("atomicMass").textContent = el.mass;
   document.getElementById("description").textContent = el.desc;
@@ -146,6 +146,22 @@ function showDetail(num) {
 function hideDetail() {
   document.getElementById("detailPanel").style.display = "none";
 }
+
+document.querySelectorAll('.element-name').forEach(el => {
+    const length = el.textContent.length;
+
+    // 設定參數
+    const maxSize = 100;   // 最大片字體 (百分比 %)
+    const minSize = 30;    // 最小字體 (百分比 %)
+    const factor  = 3;     // 每增加 1 個字，縮小多少 %
+
+    // 計算字體大小 (百分比)
+    let size = Math.max(minSize, maxSize - length * factor);
+
+    el.style.fontSize = size + "px";
+   el.style.fontWeight = "bold";
+    el.style.color = "#555";
+  });
 
 // 啟動
 //generateTable();
