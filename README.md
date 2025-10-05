@@ -19,10 +19,10 @@
 
 ## 🚀 GitHub Pages 預覽網址（部署後）
 
-👉 https://aimakerivas.github.io/html-css-js-ex/
-👉 https://aimakerivas.github.io/html-css-js-ex/periodic-table-of-elements
-👉 https://aimakerivas.github.io/html-css-js-ex/shapes
-👉 https://aimakerivas.github.io/html-css-js-ex/chromium
+👉 https://aimakerivas.github.io/html-css-js-ex/ <br>
+👉 https://aimakerivas.github.io/html-css-js-ex/periodic-table-of-elements  <br>
+👉 https://aimakerivas.github.io/html-css-js-ex/shapes  <br>
+👉 https://aimakerivas.github.io/html-css-js-ex/chromium  <br>
 
 ## 📄 GitHub Pages 設定步驟
 
