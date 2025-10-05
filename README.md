@@ -13,6 +13,9 @@
 - 類光源設定
 - 球形放大縮小
 - Rainbow Gradient
+- Shapes with Image
+- Periodic Table of the Elements
+- Chromium Architecture List
 
 ## 🚀 GitHub Pages 預覽網址（部署後）
 
