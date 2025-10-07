@@ -23,7 +23,7 @@
 👉 https://aimakerivas.github.io/html-css-js-ex/periodic-table-of-elements  <br>
 👉 https://aimakerivas.github.io/html-css-js-ex/shapes  <br>
 👉 https://aimakerivas.github.io/html-css-js-ex/chromium  <br>
-👉 https://aimakerivas.github.io/html-css-js-ex/css-display-type-ex  <br>
+👉 https://aimakerivas.github.io/html-css-js-ex/base/css-display-type-ex  <br>
 
 ## 📄 GitHub Pages 設定步驟
 
