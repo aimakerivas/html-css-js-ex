@@ -119,6 +119,6 @@
   {"num":114,"cname":"𫓧", "name":"Flerovium","symbol":"Fl","mass":"[289]","type":8,"period":7,"group":14,"category":"post-transition","state": "solid (預測)","desc": "𫓧(Flerovium)以俄羅斯核物理研究者 Flerov 命名，可能具揮發性，性質推測近似鉛。","electron": "[Rn] 5f14 6d10 7s2 7p2","img": "" },
   {"num":115,"cname":"镆", "name":"Moscovium","symbol":"Mc","mass":"[290]","type":8,"period":7,"group":15,"category":"post-transition","state": "solid (預測)","desc": "镆(Moscovium)以莫斯科州命名，人工合成，極不穩定，屬於氮族元素。","electron": "[Rn] 5f14 6d10 7s2 7p3","img": "" },
   {"num":116,"cname":"鉝", "name":"Livermorium","symbol":"Lv","mass":"[293]","type":8,"period":7,"group":16,"category":"post-transition","state": "solid (預測)","desc": "鉝(Livermorium)以美國勞倫斯利佛摩國家實驗室命名，屬硫族元素。","electron": "[Rn] 5f14 6d10 7s2 7p4","img": "" },
-  {"num":117,"cname":"石田", "name":"Tennessine","symbol":"Ts","mass":"[294]","type":6,"period":7,"group":17,"category":"halogen","state": "solid (預測)","desc": "石田(Tennessine)以美國田納西州命名，屬鹵素，可能具金屬性質，是第一個重鹵素。","electron": "[Rn] 5f14 6d10 7s2 7p5","img": "" },
+  {"num":117,"cname":"鿬", "name":"Tennessine","symbol":"Ts","mass":"[294]","type":6,"period":7,"group":17,"category":"halogen","state": "solid (預測)","desc": "石田(Tennessine)以美國田納西州命名，屬鹵素，可能具金屬性質，是第一個重鹵素。","electron": "[Rn] 5f14 6d10 7s2 7p5","img": "" },
   {"num":118,"cname":"鿫", "name":"Oganesson","symbol":"Og","mass":"[294]","type":4,"period":7,"group":18,"category":"noble-gas","state": "unknown","desc": "目前已知最重的人工合成元素，屬惰性氣體。","electron": "[Rn] 5f14 6d10 7s2 7p6","img": ""}
 ]
