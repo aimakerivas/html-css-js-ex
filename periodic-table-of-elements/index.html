@@ -24,14 +24,16 @@
 <!-- 詳細資訊面板，預設隱藏，點擊元素後顯示 -->
 <div id="detailPanel" style="display:none;">
   <button id="closeBtn" onclick="hideDetail()">關閉</button>
-  <h2 id="elementName"></h2>
+  <h3 id="elementName"></h3>
   <div class="element-info">
-    <p><strong>原子序數：</strong><span id="atomicNumber"></span></p>
-    <p><strong>化學符號：</strong><span id="chemicalSymbol"></span></p>
-    <p><strong>原子量：</strong><span id="atomicMass"></span></p>
+    <p><strong>Element Name 元素中文名：</strong><span id="cname"></span></p>
+    <p><strong>Atomic Number 原子序數：</strong><span id="atomicNumber"></span></p>
+    <p><strong>Symbol 化學符號：</strong><span id="chemicalSymbol"></span></p>
+    <p><strong>Atomic Mass 原子量：</strong><span id="atomicMass"></span></p>
     <p id="description"></p>
     <img id="elementImage" alt="元素示意圖" />
-    <div class="electron-shell"><strong>電子殼層配置：</strong><br/><span id="electronShells"></span></div>
+    <p><strong>Wiki Info: </strong><span id="wikiInfo"></span></p>
+    <div class="electron-shell"><strong>Electron Shell 電子殼層配置：</strong><br/><span id="electronShells"></span></div>
   </div>
 </div>
 </body>

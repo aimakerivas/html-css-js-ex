@@ -76,7 +76,7 @@ function generateTable() {
         let el = grid[row][col];
         if (el) {
           cell.className = "element";
-          cell.innerHTML = `<div class="element-number">${el.num}</div><div class="element-symbol">${el.symbol}</div><div class="element-name">${el.name}</div>`;
+          cell.innerHTML = `<div class="element-num-cname"><div class="element-number">${el.num}</div><div class="element-cname">${el.cname}</div></div><div class="element-symbol">${el.symbol}</div><div class="element-name">${el.name}</div>`;
           cell.title = el.name + " (" + el.symbol + ")";
           if(el.type == 1)
             //cell.style.backgroundColor = "lightgreen";
@@ -128,11 +128,14 @@ function generateTable() {
 function showDetail(num) {
   const el = elements.find(e => e.num === num);
   if (!el) return;
+  //document.getElementById("elementCname").textContent = el.cname + " (" + el.symbol + ")";
+  document.getElementById("cname").textContent = el.cname ;
   document.getElementById("elementName").textContent = el.name + " (" + el.symbol + ")";
   document.getElementById("atomicNumber").textContent = el.num ;
   document.getElementById("chemicalSymbol").textContent = el.symbol;
   document.getElementById("atomicMass").textContent = el.mass;
   document.getElementById("description").textContent = el.desc;
+  document.getElementById("wikiInfo").innerHTML = "<a href='" + el.wiki + "'>" + el.cname + " (" + el.name + ")</a>";
   const img = document.getElementById("elementImage");
   if(el.img){
     img.src = el.img;
@@ -159,7 +162,7 @@ document.querySelectorAll('.element-name').forEach(el => {
     let size = Math.max(minSize, maxSize - length * factor);
 
     el.style.fontSize = size + "px";
-   el.style.fontWeight = "bold";
+    el.style.fontWeight = "bold";
     el.style.color = "#555";
   });
 

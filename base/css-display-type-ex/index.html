@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS display 範例</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+    .demo {
+      margin: 10px 0;
+      padding: 5px;
+    }
+    .box {
+      background: lightgray;
+      border: 1px solid #555;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS display 常見值範例</h1>
+
+  <h2>1. block</h2>
+  <div class="demo" style="display:block; background:lightblue;">block (獨佔一行)</div>
+
+  <h2>2. inline</h2>
+  <span class="demo" style="display:inline; background:lightgreen;">inline 1</span>
+  <span class="demo" style="display:inline; background:lightgreen;">inline 2</span>
+
+  <h2>3. inline-block</h2>
+  <div class="demo" style="display:inline-block; width:100px; height:40px; background:orange;">inline-block 1</div>
+  <div class="demo" style="display:inline-block; width:120px; height:40px; background:tomato;">inline-block 2</div>
+
+  <h2>4. flex</h2>
+  <div class="demo" style="display:flex; gap:10px; background:lightpink;">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+
+  <h2>5. inline-flex</h2>
+  <p>文字前 <span class="demo" style="display:inline-flex; gap:5px; background:lightyellow;">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </span> 文字後</p>
+
+  <h2>6. grid</h2>
+  <div class="demo" style="display:grid; grid-template-columns: 100px 100px; gap:5px; background:lightcyan;">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </div>
+
+  <h2>7. inline-grid</h2>
+  <p>文字前 <span class="demo" style="display:inline-grid; grid-template-columns: auto auto; gap:5px; background:lightgoldenrodyellow;">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+
+  </span> 文字後</p>
+
+  <h2>8. table</h2>
+  <div class="demo" style="display:table; border:2px solid black; background:lavender;">
+    <div style="display:table-row;">
+      <div style="display:table-cell; border:1px solid gray; padding:5px;">Row1 Col1</div>
+      <div style="display:table-cell; border:1px solid gray; padding:5px;">Row1 Col2</div>
+    </div>
+    <div style="display:table-row;">
+      <div style="display:table-cell; border:1px solid gray; padding:5px;">Row2 Col1</div>
+      <div style="display:table-cell; border:1px solid gray; padding:5px;">Row2 Col2</div>
+    </div>
+  </div>
+
+  <h2>9. inline-table</h2>
+  <p>文字前 <span class="demo" style="display:inline-table; border:2px solid black; background:beige;">
+    <div style="display:table-row;">
+      <div style="display:table-cell; border:1px solid gray; padding:5px;">A</div>
+      <div style="display:table-cell; border:1px solid gray; padding:5px;">B</div>
+      <div style="display:table-cell; border:1px solid gray; padding:5px;">C</div>
+      <div style="display:table-cell; border:1px solid gray; padding:5px;">D</div>
+    
+    </div>
+  </span> 文字後</p>
+
+  <h2>10. list-item</h2>
+  <div class="demo" style="display:list-item; list-style:disc; margin-left:30px; background:lightcoral;">
+    list-item (會有項目符號)
+  </div>
+
+  <h2>11. contents</h2>
+  <div class="demo" style="display:contents; background:lightseagreen;">
+    <div class="box">Child 1</div>
+    <div class="box">Child 2</div>
+  </div>
+  <p>（父容器 <code>display:contents</code> 自己不呈現，只有子元素顯示）</p>
+
+</body>
+</html>
