@@ -98,7 +98,7 @@
   {"num":93,"cname":"錼", "name":"Neptunium","symbol":"Np","mass":"237","type":10,"period":10,"group":7,"category":"actinide","state":"solid","desc":"放射性錒系元素。","electron":"[Rn] 5f4 6d1 7s2","img":""},
   {"num":94,"cname":"鈽", "name":"Plutonium","symbol":"Pu","mass":"244","type":10,"period":10,"group":8,"category":"actinide","state":"solid","desc":"核武器及核燃料材料。","electron":"[Rn] 5f6 7s2","img":""},
   {"num":95,"cname":"鋂", "name":"Americium","symbol":"Am","mass":"243","type":10,"period":10,"group":9,"category":"actinide","state":"solid","desc":"人造錒系元素。","electron":"[Rn] 5f7 7s2","img":""},
-  {"num":96,"cname":"锔", "name":"Curium","symbol":"Cm","mass":"247","type":10,"period":10,"group":10,"category":"actinide","state":"solid","desc":"人造錒系元素。","electron":"[Rn] 5f7 6d1 7s2","img":""},
+  {"num":96,"cname":"鋦", "name":"Curium","symbol":"Cm","mass":"247","type":10,"period":10,"group":10,"category":"actinide","state":"solid","desc":"人造錒系元素。","electron":"[Rn] 5f7 6d1 7s2","img":""},
   {"num":97,"cname":"鉳", "name":"Berkelium","symbol":"Bk","mass":"247","type":10,"period":10,"group":11,"category":"actinide","state":"solid","desc":"人工合成的錒系元素。","electron":"[Rn] 5f9 7s2","img":""},
   {"num":98,"cname":"鉲", "name":"Californium","symbol":"Cf","mass":"251","type":10,"period":10,"group":12,"category":"actinide","state":"solid","desc":"人工合成錒系元素，有多種同位素。","electron":"[Rn] 5f10 7s2","img":""},
   {"num":99,"cname":"鑀", "name":"Einsteinium","symbol":"Es","mass":"252","type":10,"period":10,"group":13,"category":"actinide","state":"solid","desc":"人造錒系元素。","electron":"[Rn] 5f11 7s2","img":""},
